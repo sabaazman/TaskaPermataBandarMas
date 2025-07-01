@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPA</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-container">
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a href="pendidik_dashboard.php"><span>Dashboard Pendidik</span></a>
+            <a href="logout.php">Logout</a>
+        </header>
+
+        <!-- Navigation -->
+        <nav>
+            <ul>
+                <li><a href="profilPendidik.php">Profil</a></li>
+                <li><a href="#">Sumbangan Aktiviti</a></li>
+                <li><a href="display_jadualPendidik.php">Jadual Pelajar</a></li>
+                <li><a href="rpa.html">RPA</a></li>
+                <li><a href="laporan.php">Laporan</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main>
+            <style>
+                .vertical-table {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                .vertical-table .row {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    background-color: #f9f9f9;
+                    border: 1px solid #ddd;
+                }
+                .vertical-table .row .title {
+                    font-weight: bold;
+                    width: 30%;
+                }
+                .vertical-table .row .content {
+                    width: 65%;
+                }
+                .form-container button {
+                    padding: 5px 10px;
+                    font-size: 0.9em;
+                }
+            </style>
+            <h2>Rancangan Pelaksanaan Aktiviti</h2>
+            <div class="form-container">
+                <label for="minggu">Minggu:</label>
+                <select id="minggu" name="minggu">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <label for="tarikh">Tarikh:</label>
+                <input type="date" id="tarikh" name="tarikh">
+
+                <label for="masa">Masa:</label>
+                <select id="masa" name="masa">
+                    <option value="10:30 AM">10:30 AM</option>
+                    <option value="4:00 PM">4:00 PM</option>
+                </select>
+
+                <label for="hari">Hari:</label>
+                <select id="hari" name="hari">
+                    <option value="isnin">Isnin</option>
+                    <option value="selasa">Selasa</option>
+                    <option value="rabu">Rabu</option>
+                    <option value="khamis">Khamis</option>
+                    <option value="jumaat">Jumaat</option>
+                </select>
+
+                <button type="button">Submit</button>
+                <button type="button">Edit</button>
+            </div>
+
+            <div class="vertical-table">
+                <div class="row">
+                    <div class="title">Tajuk/Topik</div>
+                    <div class="content">Warnaiku!</div>
+                </div>
+                <div class="row">
+                    <div class="title">Pengetahuan Sedia Ada Kanak-Kanak</div>
+                    <div class="content">Kanak-kanak dapat memegang objek menggunakan jari dengan baik.</div>
+                </div>
+                <div class="row">
+                    <div class="title">Objektif Pembelajaran</div>
+                    <div class="content">
+                        <ol>
+                            <li>Mewarnakan bendera Malaysia mengikut kreativiti masing-masing.</li>
+                            <li>Memegang pensil warna dengan genggaman yang betul melalui bimbingan.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="title">Bidang Perkembangan</div>
+                    <div class="content">
+                        <ul>
+                            <li>Perkembangan Kreativiti dan Estetika</li>
+                            <li>Perkembangan Bahasa Komunikasi dan Literasi Awal</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="title">Bahan/Perbendaharaan Kata</div>
+                    <div class="content">
+                        <ul>
+                            <li>Bendera Malaysia</li>
+                            <li>Pensil warna</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="title">Tempat/Ruang</div>
+                    <div class="content">Di dalam kelas</div>
+                </div>
+                <div class="row">
+                    <div class="title">Rancangan Pelaksanaan</div>
+                    <div class="content">
+                        <ol>
+                            <li>Pendidik telah menyediakan bahan dan tempat untuk melakukan aktiviti.</li>
+                            <li>Pendidik memastikan kanak-kanak tidak mengalami masalah kesihatan, selesa dan bersedia melakukan aktiviti.</li>
+                            <li>Pendidik membawa kanak-kanak ke ruang aktiviti.</li>
+                            <li>Pendidik meminta kanak-kanak membuat bulatan.</li>
+                            <li>Pendidik memastikan setiap kanak-kanak mempunyai ruang sebelum memulakan aktiviti.</li>
+                            <li>Pendidik menunjukkan gambar bendera kepada kanak-kanak.</li>
+                            <li>Pendidik bersoal jawab dengan kanak-kanak mengenai gambar tersebut.</li>
+                            <li>Pendidik menyediakan pensil warna dan templet bendera untuk kanak-kanak.</li>
+                            <li>Pendidik memastikan kanak-kanak tidak mencederakan rakan seperti mencucuk menggunakan pensil sepanjang aktiviti mewarna.</li>
+                            <li>Pendidik membimbing kanak-kanak yang tidak tahu memegang pensil dengan betul.</li>
+                            <li>Pendidik memberi pujian dan tepukan kepada kanak-kanak kerana telah mengikuti sepanjang aktiviti.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="title">Hasil Pembelajaran</div>
+                    <div class="content">
+                        <ul>
+                            <li>Kanak-kanak dapat bekerjasama antara satu sama lain</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
