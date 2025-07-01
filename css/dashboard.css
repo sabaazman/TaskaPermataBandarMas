@@ -1,0 +1,467 @@
+/* General Styling */
+.dashboard-container {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+    color: #2c3e50;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.dashboard-container .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* Header */
+.dashboard-container header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #3a4065 0%, #4e54c8 100%);
+    padding: 1rem 2rem;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container header a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.dashboard-container header a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Navigation */
+.dashboard-container nav {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Navigation and Dropdown Styling */
+.dashboard-container nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.dashboard-container nav ul li {
+    position: relative;
+}
+
+.dashboard-container nav ul li a {
+    color: #3a4065;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    display: block;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.dropdown-parent > a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.dropdown-icon {
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff !important;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(58, 64, 101, 0.1);
+    padding: 0.5rem;
+    display: none;
+    z-index: 1000;
+}
+
+.dropdown-parent:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    width: 100%;
+    margin: 0;
+}
+
+.dropdown li a {
+    padding: 0.75rem 1rem;
+    display: block;
+    color: #3a4065;
+    text-decoration: none;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.dropdown li a:hover {
+    background: rgba(58, 64, 101, 0.1);
+    color: #4e54c8;
+}
+
+.dropdown-parent:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.dropdown-parent:not(:hover) .dropdown {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.dropdown li {
+    width: 100%;
+}
+
+.dropdown li a {
+    padding: 0.75rem 1.5rem;
+    color: #3a4065;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown-parent:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-parent:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+/* Active state for navigation items */
+.dashboard-container nav ul li a:hover,
+.dropdown li a:hover {
+    background: rgba(58, 64, 101, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .dashboard-container nav ul {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        margin-top: 0;
+        padding-left: 1.5rem;
+    }
+
+    .dropdown li a {
+        padding-left: 2rem;
+    }
+}
+
+/* Active Link Style */
+.dashboard-container nav ul li a.active {
+    background-color: #3a4065;
+    color: white;
+}
+
+/* Main Content */
+.dashboard-container main {
+    padding: 2rem;
+    background: #fff;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-container main h2 {
+    margin-top: 0;
+    color: #3a4065;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-container main p {
+    line-height: 1.8;
+    color: #2c3e50;
+    font-size: 1.1em;
+    margin-bottom: 2rem;
+}
+
+/* Remove or modify general button styles */
+.dashboard-container button,
+.dashboard-container .interactive-link {
+    background: none;  /* Remove the gradient */
+    color: inherit;    /* Inherit text color */
+    border: none;      /* Remove border */
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.dashboard-container button:hover,
+.dashboard-container .interactive-link:hover {
+    transform: translateY(-2px);
+    box-shadow: none;  /* Remove shadow on hover */
+}
+/* Table Styling */
+.dashboard-container table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 1.5rem auto; /* Changed to auto for horizontal centering */
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.449);
+}
+
+.dashboard-container th,
+.dashboard-container td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.dashboard-container th {
+    background: #3a4065;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center; /* Center align for th only */
+}
+
+.dashboard-container td {
+    text-align: left; /* Explicit left align for td */
+}
+
+.dashboard-container tr:hover {
+    background: rgba(58, 64, 101, 0.02);
+}
+
+/* Status Indicators */
+.status-pending,
+.status-approved,
+.status-rejected {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-block;
+}
+
+.status-pending {
+    background: #fff3cd;
+    color: #856404;
+}
+
+.status-approved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.status-rejected {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .dashboard-container nav ul {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .dashboard-container header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .dashboard-container main {
+        padding: 1rem;
+    }
+
+    .dashboard-container table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .dashboard-container th,
+    .dashboard-container td {
+        min-width: 120px;
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    background-color: #3a4065;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a.active {
+    background-color: #444;
+}
+
+/* Dropdown Menu Styling */
+/* Navigation and Dropdown Styling */
+.dropdown-parent {
+    position: relative;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 200px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+    z-index: 1000;
+    margin-top: 0.5rem;
+}
+
+.dropdown-parent:hover .dropdown {
+    display: block;
+}
+
+.dropdown-parent:not(:hover) .dropdown {
+    display: none;
+}
+
+.dropdown li a {
+    padding: 0.75rem 1.5rem;
+    color: #3a4065;
+    display: block;
+    white-space: nowrap;
+}
+
+.dropdown li a:hover {
+    background: rgba(58, 64, 101, 0.1);
+}
+
+.dropdown-icon {
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.dropdown-parent:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Remove any existing dropdown styles from dashboard.css to avoid conflicts */
+.dropdown-parent {
+    position: relative;
+}
+
+.dropdown-icon {
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-parent:hover .dropdown-icon {
+    transform: rotate(180deg);
+}
+
+.dropdown li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown li a {
+    padding: 10px 15px;
+    display: block;
+    color: #3a4065;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown li a:hover {
+    background: rgba(58, 64, 101, 0.1);
+    color: #3a4065;
+}
+
+/* Responsive Dropdown */
+@media (max-width: 768px) {
+    .dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        margin-left: 20px;
+    }
+
+    .dropdown li a {
+        padding-left: 30px;
+    }
+}
+
+
